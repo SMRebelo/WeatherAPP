@@ -52,7 +52,7 @@ export function getCityWeather(city) {
       const pathIcon = res.data.current.condition.icon.split("/");
       document.getElementById(
         "tempImg"
-      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/icons/${
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/${
         pathIcon[pathIcon.length - 2]
       }/${pathIcon[pathIcon.length - 1]}`;
 
@@ -73,7 +73,7 @@ export function getCityWeather(city) {
 
       document.getElementById(
         "logo1st"
-      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/icons/${
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/${
         pathIcon[pathIcon.length - 2]
       }/${pathIcon[pathIcon.length - 1]}`;
 
@@ -113,7 +113,7 @@ export function getCityWeather(city) {
         res.data.forecast.forecastday[2].day.condition.icon.split("/");
       document.getElementById(
         "logo3rd"
-      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/icons/${
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/${
         pathIconthird[pathIconthird.length - 2]
       }/${pathIconthird[pathIconthird.length - 1]}`;
 
@@ -134,7 +134,7 @@ export function getCityWeather(city) {
         res.data.forecast.forecastday[3].day.condition.icon.split("/");
       document.getElementById(
         "logo4th"
-      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/icons/${
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/${
         pathIconFourth[pathIconFourth.length - 2]
       }/${pathIconFourth[pathIconFourth.length - 1]}`;
 
