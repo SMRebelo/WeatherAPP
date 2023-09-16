@@ -50,7 +50,7 @@ export function getCityWeather(city) {
       ).innerHTML = `${res.data.current.condition.text}`;
 
       const pathIcon = res.data.current.condition.icon.split("/");
-      document.getElementById("tempImg").src = `./public/icons/${
+      document.getElementById("tempImg").src = `/public/icons/${
         pathIcon[pathIcon.length - 2]
       }/${pathIcon[pathIcon.length - 1]}`;
 
@@ -69,7 +69,7 @@ export function getCityWeather(city) {
       /* DOWN HERE WE GONNA START THE 4 DAYS BOX PREDICTION */
       /* First Columm*/
 
-      document.getElementById("logo1st").src = `./public/icons/${
+      document.getElementById("logo1st").src = `/public/icons/${
         pathIcon[pathIcon.length - 2]
       }/${pathIcon[pathIcon.length - 1]}`;
 
@@ -86,7 +86,7 @@ export function getCityWeather(city) {
 
       const pathIconSecond =
         res.data.forecast.forecastday[1].day.condition.icon.split("/");
-      document.getElementById("logo2nd").src = `./public/icons/${
+      document.getElementById("logo2nd").src = `/public/icons/${
         pathIconSecond[pathIconSecond.length - 2]
       }/${pathIconSecond[pathIconSecond.length - 1]}`;
 
@@ -105,7 +105,7 @@ export function getCityWeather(city) {
 
       const pathIconthird =
         res.data.forecast.forecastday[2].day.condition.icon.split("/");
-      document.getElementById("logo3rd").src = `./public/icons/${
+      document.getElementById("logo3rd").src = `/public/icons/${
         pathIconthird[pathIconthird.length - 2]
       }/${pathIconthird[pathIconthird.length - 1]}`;
 
@@ -124,7 +124,7 @@ export function getCityWeather(city) {
 
       const pathIconFourth =
         res.data.forecast.forecastday[3].day.condition.icon.split("/");
-      document.getElementById("logo4th").src = `./public/icons/${
+      document.getElementById("logo4th").src = `/public/icons/${
         pathIconFourth[pathIconFourth.length - 2]
       }/${pathIconFourth[pathIconFourth.length - 1]}`;
 

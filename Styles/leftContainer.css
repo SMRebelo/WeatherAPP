@@ -2,7 +2,7 @@
   position: relative;
   width: 28.8125em;
   height: 39.625em;
-  background-image: url("public/Imagem_de_fundo.png");
+  background-image: url("/public/Imagem_de_fundo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
