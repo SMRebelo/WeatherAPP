@@ -3,6 +3,7 @@ import "./Styles/leftContainer.css";
 import "./Styles/rightContainer.css";
 import "./js/ask.js";
 import { getCityWeather } from "./js/getweather";
+import "./js/selectDay.js";
 
 // BY RICARDO MOTA FREITA THE MOTHER FUCKING CHEF!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
