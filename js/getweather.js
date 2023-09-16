@@ -1,13 +1,14 @@
+import axios from "axios";
+
 const key = "b182adc399c946b9800225331231509";
 
 export function getCityWeather(city) {
   // const getCityWeather = (city) => {}     <--- this is the best way to declare a function!!!!
-  fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=4&aqi=no&alerts=no`
-  ) //axios gets the information from the API in the WEB
-    .then(async (res) => {
-      res.data = await res.json();
-
+  axios
+    .get(
+      `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=4&aqi=no&alerts=no`
+    ) //axios gets the information from the API in the WEB
+    .then((res) => {
       // returns the result in a variable called "res".
       document.getElementById(
         "tempDegres"
