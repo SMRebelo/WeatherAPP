@@ -2,9 +2,8 @@ import axios from "axios";
 
 const key = "b182adc399c946b9800225331231509";
 
-const folder = window.location.href.includes("vercel") ? "assets" : "public";
-
 export function getCityWeather(city) {
+  const folder = window.location.href.includes("vercel") ? "assets" : "public"; // by Ricardo mota freitas
   // const getCityWeather = (city) => {}     <--- this is the best way to declare a function!!!!
   axios
     .get(
