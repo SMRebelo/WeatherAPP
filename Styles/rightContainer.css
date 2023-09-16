@@ -1,0 +1,121 @@
+.right {
+  width: 30.5em;
+  height: 36.9375em;
+  background-color: #222831;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5625em;
+  justify-content: center;
+}
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-left: 3.4375em;
+  margin-right: 3.125em;
+}
+.stat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.stat > h3 {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.stat > p {
+  color: #fff;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.days {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Aligns the collums horizontally */
+  justify-content: center; /* Aligns the collums vertically */
+  height: 10.5em;
+  margin-right: 3.5625em;
+  margin-left: 3.5625em;
+}
+.dayBox {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #272e37;
+  box-shadow: 1px 2px 4px 0px #222831;
+  height: 100%;
+  flex: 1;
+  align-items: center;
+  gap: 0.9375em;
+  justify-content: space-evenly;
+}
+.dayBox > img {
+  width: 55px;
+  height: 55px;
+}
+.dayBox > label {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.dayBox > p {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.active {
+  background: #fff;
+}
+.imgActive {
+  filter: invert(100%); /* invert white color to black */
+}
+.dayActive {
+  color: #000 !important; /* Use "!important" to overwrite the previsous style */
+}
+.tempActive {
+  color: #000 !important;
+}
+.right > button {
+  width: 25.9375em;
+  height: 3.3125em;
+  border-radius: 10px;
+  background: linear-gradient(
+    91deg,
+    rgba(144, 217, 224, 0.9) 0.2%,
+    rgba(84, 96, 230, 0.9) 100%
+  );
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+.right > button > span {
+  color: #fff;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

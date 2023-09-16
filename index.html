@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png  " href="public/icons/day/113.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Weather APP</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Istok+Web&family=Montserrat:wght@500;600;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <section class="left">
+        <div class="timeLocation">
+          <p id="dayOfWeek">
+            <script>
+              document.write(
+                new Date().toLocaleString("en-us", { weekday: "long" })
+              );
+            </script>
+          </p>
+          <date id="date">20 Jun 2023</date>
+          <!--  Tag date that is the same as a <p>  -->
+          <div class="location">
+            <img src="public/Location.svg" alt="icon location" />
+            <p id="place">Porto, PT</p>
+          </div>
+        </div>
+        <div class="temperature">
+          <img src="public/icons/day/113.png" alt="logo weather condition" id="tempImg" />
+          <p id="tempDegres">°C</p>
+          <p id="tempDesc">Sunny</p>
+        </div>
+      </section>
+      <aside class="right">
+        <section class="status">
+          <div class="stat">
+            <h3>RAINY ODDS</h3>
+            <p id="precipitation">0%</p>
+          </div>
+          <div class="stat">
+            <h3>HUMIDITY</h3>
+            <p id="humidity">0%</p>
+          </div>
+          <div class="stat">
+            <h3>WIND</h3>
+            <p id="wind">km/h</p>
+          </div>
+        </section>
+        <section class="days">
+          <div id="1st" class="dayBox active">
+            <img
+              src="public/Sun.svg"
+              alt="logo sun"
+              id="logo1st"
+              class="imgActive"
+            />
+            <label id="day1st" class="dayActive">Tue</label>
+            <p id="temp1st" class="tempActive">30 °C</p>
+          </div>
+          <div id="2nd" class="dayBox">
+            <img
+              src="public/bi_cloud-sun.svg"
+              alt="logo cloud sun"
+              id="logo2nd"
+            />
+            <label id="day2nd">Wed</label>
+            <p id="temp2nd">22 °C</p>
+          </div>
+          <div id="3rd" class="dayBox">
+            <img
+              src="public/bi_cloud-rain.svg"
+              alt="logo cloud rain"
+              id="logo3rd"
+            />
+            <label id="day3rd">Thu</label>
+            <p id="temp3rd">06 °C</p>
+          </div>
+          <div id="4th" class="dayBox">
+            <img src="public/Sun.svg" alt="logo sun" id="logo4th" />
+            <label id="day4th">Fry</label>
+            <p id="temp4th">26 °C</p>
+          </div>
+        </section>
+        <button id="btn">
+          <img src="public/Location.svg" alt="logo location" /><span
+            >Change Location</span
+          >
+        </button>
+      </aside>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

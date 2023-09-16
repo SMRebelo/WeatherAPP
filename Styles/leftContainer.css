@@ -1,0 +1,84 @@
+.left {
+  position: relative;
+  width: 28.8125em;
+  height: 39.625em;
+  background-image: url("public/Imagem_de_fundo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: rgba(6, 44, 105, 0.4);
+  border-radius: 25px;
+}
+.timeLocation {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 2em;
+  margin-top: 3em;
+  color: #fff;
+  gap: 0.8125em;
+}
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 0.5em;
+}
+.timeLocation > p {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 37px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.timeLocation > date {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.temperature {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0, 6875em;
+  margin-left: 2em;
+  margin-bottom: 5.25em;
+}
+.temperature > img {
+  object-fit: fill; /* When using images its importante to always use /object-fit/  */
+  width: 95px !important; /* When using SVG its importante to always use the command "!important" to overwrite the default size + ALWAYS*/
+  height: 95px !important; /*USE PX */
+}
+.temperature > #tempDegres {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.temperature > #tempDesc {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
