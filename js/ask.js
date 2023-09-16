@@ -1,6 +1,6 @@
 // npm i sweetalert --> Library that generates popups! 
 import swal from 'sweetalert';
-import {getCityWeather} from '/getweather.js'; // We use {} in {getCityWeather} beacause we only whant to import the actual function not the all page.
+import {getCityWeather} from '.getweather.js'; // We use {} in {getCityWeather} beacause we only whant to import the actual function not the all page.
 
 const button = document.getElementById('btn'); // gets the button from the HTML
 
