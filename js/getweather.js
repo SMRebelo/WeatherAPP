@@ -3,7 +3,6 @@ import axios from "axios";
 const key = "b182adc399c946b9800225331231509";
 
 export function getCityWeather(city) {
-  const folder = window.location.href.includes("vercel") ? "assets" : "public"; // by Ricardo mota freitas
   // const getCityWeather = (city) => {}     <--- this is the best way to declare a function!!!!
   axios
     .get(
@@ -51,7 +50,9 @@ export function getCityWeather(city) {
       ).innerHTML = `${res.data.current.condition.text}`;
 
       const pathIcon = res.data.current.condition.icon.split("/");
-      document.getElementById("tempImg").src = `/${folder}/icons/${
+      document.getElementById(
+        "tempImg"
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/icons/${
         pathIcon[pathIcon.length - 2]
       }/${pathIcon[pathIcon.length - 1]}`;
 
@@ -70,7 +71,9 @@ export function getCityWeather(city) {
       /* DOWN HERE WE GONNA START THE 4 DAYS BOX PREDICTION */
       /* First Columm*/
 
-      document.getElementById("logo1st").src = `/${folder}/icons/${
+      document.getElementById(
+        "logo1st"
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/icons/${
         pathIcon[pathIcon.length - 2]
       }/${pathIcon[pathIcon.length - 1]}`;
 
@@ -87,7 +90,9 @@ export function getCityWeather(city) {
 
       const pathIconSecond =
         res.data.forecast.forecastday[1].day.condition.icon.split("/");
-      document.getElementById("logo2nd").src = `/${folder}/icons/${
+      document.getElementById(
+        "logo2nd"
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/${
         pathIconSecond[pathIconSecond.length - 2]
       }/${pathIconSecond[pathIconSecond.length - 1]}`;
 
@@ -106,7 +111,9 @@ export function getCityWeather(city) {
 
       const pathIconthird =
         res.data.forecast.forecastday[2].day.condition.icon.split("/");
-      document.getElementById("logo3rd").src = `/${folder}/icons/${
+      document.getElementById(
+        "logo3rd"
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/icons/${
         pathIconthird[pathIconthird.length - 2]
       }/${pathIconthird[pathIconthird.length - 1]}`;
 
@@ -125,7 +132,9 @@ export function getCityWeather(city) {
 
       const pathIconFourth =
         res.data.forecast.forecastday[3].day.condition.icon.split("/");
-      document.getElementById("logo4th").src = `/${folder}/icons/${
+      document.getElementById(
+        "logo4th"
+      ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/icons/${
         pathIconFourth[pathIconFourth.length - 2]
       }/${pathIconFourth[pathIconFourth.length - 1]}`;
 
