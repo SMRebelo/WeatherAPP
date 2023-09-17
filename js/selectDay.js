@@ -32,7 +32,7 @@ document.getElementById("2nd").addEventListener("click", (event,) => {
   document.getElementById("day2nd").classList.add("dayActive");
   document.getElementById("temp2nd").classList.add("tempActive");
 
-  getCityWeather2nd();
+  getCityWeather2nd("city");
 });
 
 document.getElementById("3rd").addEventListener("click", (event) => {
@@ -57,7 +57,7 @@ document.getElementById("3rd").addEventListener("click", (event) => {
   document.getElementById("day3rd").classList.add("dayActive");
   document.getElementById("temp3rd").classList.add("tempActive");
 
-  getCityWeather3rd();
+  getCityWeather3rd("city");
 });
 
 document.getElementById("4th").addEventListener("click", (event) => {
@@ -82,7 +82,7 @@ document.getElementById("4th").addEventListener("click", (event) => {
   document.getElementById("day4th").classList.add("dayActive");
   document.getElementById("temp4th").classList.add("tempActive");
 
-  getCityWeather4th();
+  getCityWeather4th("city");
 });
 
 document.getElementById("1st").addEventListener("click", (event) => {
@@ -107,5 +107,5 @@ document.getElementById("1st").addEventListener("click", (event) => {
   document.getElementById("day1st").classList.add("dayActive");
   document.getElementById("temp1st").classList.add("tempActive");
 
-  getCityWeather();
+  getCityWeather("city");
 });
