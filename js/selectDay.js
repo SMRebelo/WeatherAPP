@@ -1,9 +1,16 @@
+import { getCityWeather } from "/js/getweather.js";
+import { getCityWeather2nd } from "/js/getweather2nd.js";
+import { getCityWeather3rd } from "/js/getweather3rd.js";
+import { getCityWeather4th } from "/js/getweather4th.js";
+
+
 const btn1 = document.getElementById("1st");
 const btn2 = document.getElementById("2nd");
 const btn3 = document.getElementById("3rd");
 const btn4 = document.getElementById("4th");
 
-document.getElementById("2nd").addEventListener("click", (event) => {
+
+document.getElementById("2nd").addEventListener("click", (event,) => {
   if (btn1.classList.contains("active")) {
     btn1.classList.remove("active");
     document.getElementById("logo1st").classList.remove("imgActive");
@@ -24,6 +31,8 @@ document.getElementById("2nd").addEventListener("click", (event) => {
   document.getElementById("logo2nd").classList.add("imgActive");
   document.getElementById("day2nd").classList.add("dayActive");
   document.getElementById("temp2nd").classList.add("tempActive");
+
+  getCityWeather2nd();
 });
 
 document.getElementById("3rd").addEventListener("click", (event) => {
@@ -47,6 +56,8 @@ document.getElementById("3rd").addEventListener("click", (event) => {
   document.getElementById("logo3rd").classList.add("imgActive");
   document.getElementById("day3rd").classList.add("dayActive");
   document.getElementById("temp3rd").classList.add("tempActive");
+
+  getCityWeather3rd();
 });
 
 document.getElementById("4th").addEventListener("click", (event) => {
@@ -70,6 +81,8 @@ document.getElementById("4th").addEventListener("click", (event) => {
   document.getElementById("logo4th").classList.add("imgActive");
   document.getElementById("day4th").classList.add("dayActive");
   document.getElementById("temp4th").classList.add("tempActive");
+
+  getCityWeather4th();
 });
 
 document.getElementById("1st").addEventListener("click", (event) => {
@@ -93,4 +106,6 @@ document.getElementById("1st").addEventListener("click", (event) => {
   document.getElementById("logo1st").classList.add("imgActive");
   document.getElementById("day1st").classList.add("dayActive");
   document.getElementById("temp1st").classList.add("tempActive");
+
+  getCityWeather();
 });

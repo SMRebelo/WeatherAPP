@@ -1,8 +1,9 @@
 import axios from "axios";
 
-const key = "b182adc399c946b9800225331231509";
+const key = "011abb2c2e4742fc9d8134320231709";
 
-export const getCityWeather4th = (city) => {
+export function getCityWeather4th(city) {
+
   axios
     .get(
       `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=4&aqi=no&alerts=no`
