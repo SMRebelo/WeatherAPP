@@ -2,7 +2,7 @@ import axios from "axios";
 
 const key = "b182adc399c946b9800225331231509";
 
-export const getCityWeather2nd = (city) => {
+export const getCityWeather3rd = (city) => {
   axios
     .get(
       `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${city}&days=4&aqi=no&alerts=no`
@@ -10,12 +10,12 @@ export const getCityWeather2nd = (city) => {
     .then((res) => {
       document.getElementById(
         "tempDegres"
-      ).innerHTML = `${res.data.forecast.forecastday[1].day.avgtemp_c} °C`; // res.data because axios library works that way      
+      ).innerHTML = `${res.data.forecast.forecastday[2].day.avgtemp_c} °C`; // res.data because axios library works that way      
       document.getElementById(
         "place"
       ).innerHTML = `${res.data.location.name}, ${res.data.location.country}`;
 
-      let [year, mon, day] = res.data.forecast.forecastday[1].date.split("-"); // split is use to genarate a matriz(ARRAY)
+      let [year, mon, day] = res.data.forecast.forecastday[2].date.split("-"); // split is use to genarate a matriz(ARRAY)
       
       let month = [
         "Jan",
@@ -43,9 +43,9 @@ export const getCityWeather2nd = (city) => {
 
       document.getElementById(
         "tempDesc"
-      ).innerHTML = `${res.data.forecast.forecastday[1].day.condition.text}`;
+      ).innerHTML = `${res.data.forecast.forecastday[2].day.condition.text}`;
 
-      const pathIcon = res.data.forecast.forecastday[1].day.condition.icon.split("/");
+      const pathIcon = res.data.forecast.forecastday[2].day.condition.icon.split("/");
       document.getElementById(
         "tempImg"
       ).src = `https://raw.githubusercontent.com/SMRebelo/WeatherAPP/main/public/icons/${
@@ -54,15 +54,15 @@ export const getCityWeather2nd = (city) => {
 
       document.getElementById(
         "precipitation"
-      ).innerHTML = `${res.data.forecast.forecastday[1].day.daily_chance_of_rain}%`;
+      ).innerHTML = `${res.data.forecast.forecastday[2].day.daily_chance_of_rain}%`;
 
       document.getElementById(
         "humidity"
-      ).innerHTML = `${res.data.forecast.forecastday[1].day.avghumidity}%`;
+      ).innerHTML = `${res.data.forecast.forecastday[2].day.avghumidity}%`;
 
       document.getElementById(
         "wind"
-      ).innerHTML = `${res.data.forecast.forecastday[1].day.maxwind_kph} km/h`;
+      ).innerHTML = `${res.data.forecast.forecastday[2].day.maxwind_kph} km/h`;
 
       /* DOWN HERE WE GONNA START THE 4 DAYS BOX PREDICTION */
       /* First Columm*/
