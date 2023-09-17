@@ -16,13 +16,7 @@
     <div class="app">
       <section class="left">
         <div class="timeLocation">
-          <p id="dayOfWeek">
-            <script>
-              document.write(
-                new Date().toLocaleString("en-us", { weekday: "long" })
-              );
-            </script>
-          </p>
+          <p id="dayOfWeek"></p>
           <date id="date">20 Jun 2023</date>
           <!--  Tag date that is the same as a <p>  -->
           <div class="location">
@@ -58,7 +52,7 @@
         <section class="days">
           <div id="1st" class="dayBox active">
             <img
-              src="/public/Sun.svg"
+              src="/public/icons/day/113.png"
               alt="logo sun"
               id="logo1st"
               class="imgActive"
@@ -85,11 +79,7 @@
             <p id="temp3rd">06 °C</p>
           </div>
           <div id="4th" class="dayBox">
-            <img
-              src="/public/Sun.svg"
-              alt="logo sun"
-              id="logo4th"
-            />
+            <img src="/public/icons/day/113.png" alt="logo sun" id="logo4th" />
             <label id="day4th">Fry</label>
             <p id="temp4th">26 °C</p>
           </div>
